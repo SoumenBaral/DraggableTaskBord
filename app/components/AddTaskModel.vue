@@ -17,7 +17,7 @@ function save(){
 </script>
 <template>
   <div class="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-    <div class="bg-white rounded p-4 w-full max-w-md">
+    <div class="bg-blue-50 border-b-4 border-l-2 border-blue-500 rounded-2xl p-4 w-full max-w-md">
       <h3 class="text-lg font-medium mb-3">{{ task ? 'Edit Task' : 'Add Task' }}</h3>
       <form @submit.prevent="save">
         <input v-model="form.title" required placeholder="Title" class="w-full border rounded px-3 py-2 mb-2" />
@@ -29,8 +29,8 @@ function save(){
           <option value="done">Done</option>
         </select>
         <div class="flex justify-end gap-2">
-          <button type="button" @click="$emit('close')" class="px-3 py-2 rounded border">Cancel</button>
-          <button type="submit" class="px-3 py-2 rounded bg-sky-600 text-white">Save</button>
+          <button type="button" @click="$emit('close')" class="px-3 py-2 shadow rounded border">Cancel</button>
+          <button type="submit" class="px-6 py-2 rounded bg-sky-600 shadow text-white">Save</button>
         </div>
       </form>
     </div>

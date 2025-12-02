@@ -1,3 +1,15 @@
+
+<script setup>
+import { useTasksStore } from "~/composables/stores/useTasksStore";
+import KanbanColumn from "./KanbanColumn.vue";
+
+const store = useTasksStore();
+
+function updateStage(stage, newList) {
+  store.tasks[stage] = newList;
+}
+</script>
+
 <template>
   <div class="p-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -12,13 +24,3 @@
   </div>
 </template>
 
-<script setup>
-import { useTasksStore } from "~/composables/stores/useTasksStore";
-import KanbanColumn from "./KanbanColumn.vue";
-
-const store = useTasksStore();
-
-function updateStage(stage, newList) {
-  store.tasks[stage] = newList;
-}
-</script>
