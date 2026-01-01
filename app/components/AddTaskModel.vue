@@ -12,7 +12,7 @@ const form = reactive({
 function save(){
   if(props.task) store?.updateTask(props.task.id, { title: form.title, assignee: form.assignee, stage: form.stage })
   else store?.addTask({ title: form.title, assignee: form.assignee, stage: form.stage as any })
-  emit('close')
+  emit('close') 
 }
 </script>
 <template>
