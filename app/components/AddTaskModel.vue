@@ -15,7 +15,7 @@ function save(){
   emit('close') 
 }
 </script>
-<template> 
+<template>  
   <div class="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
     <div class="bg-blue-50 border-b-4 border-l-2 border-blue-500 rounded-2xl p-4 w-full max-w-md">
       <h3 class="text-lg font-medium mb-3">{{ task ? 'Edit Task' : 'Add Task' }}</h3>
